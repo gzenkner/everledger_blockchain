@@ -11,12 +11,29 @@ class Blockchain:
         self.creation_date = datetime.datetime.timestamp(datetime.datetime.now())
         self.name = name
         self.node_chain = []
-        self.chain = []
+        self.block_chain = [self.create_genesis_block()]
 
-    def add_node(self):
-        self.node_chain = []
+    def create_genesis_block(self):
+        return Block(0, "0"*64, [])
+    
+    def add_node(self, node):
+        self.node_chain.append(node)
+    
+    # def validate_block(self):
+    #     for block in self.block_chain:
+    #         if block.parent_hash > 0:
 
-    def block_concensus(self):
+    #         # parent_hash
+    #         # block_hash
+
+    #     # 66% concensus
+
+    #     if len(self.node_chain) > 0:
+    #         for node in self.node_chain:
+    #             if node.ledger
+    #     self.node_chain = []
+
+    def number_of_nodes_for_concensus(self):
         node_count = len(self.node_chain)
         majority = int(math.ceil(node_count) / 2)
         return f"Need a minimum of {majority} nodes needed"
@@ -30,7 +47,22 @@ class Blockchain:
             print('Could not validate block')
 
     def get_most_recent_block(self):
-        return self.chain[-1]
+        if len(self.block_chain) > 0:
+            return self.block_chain[-1]
+        else:
+            print('No blocks added yet')
+
+    def proof_of_work_example(self, data, number_zeros):
+        # 0x1f3206401212c828 actual example of a nonce  
+        prefix = '0'*number_zeros
+        nonce = 0
+        while True:
+            guess = f'{data}{nonce}'
+            hash = hashlib.sha256(guess.encode()).hexdigest()
+            if hash.startswith(prefix):
+                print(f'Nonce {nonce} satisfies condition')
+                return nonce
+            nonce += 1
     
 class Transaction:
     def __init__(self, nonce, from_address, to_address, value):
@@ -81,15 +113,13 @@ class Block():
         Mutate transactions within a block to test the effect on verification and concensus within the block chain
         """
         pass
-        
+
 class Node:
-    def __init__(self, hardware, software, country, execution_client):
+    def __init__(self, hardware, execution_client):
         self.hardware = hardware
-        self.software = software
-        self.country = country
         self.execution_client = execution_client
+        self.ledger = None
 
-
-
-
-
+class Validator():
+    def __init__(self, name):
+        self.name = name
