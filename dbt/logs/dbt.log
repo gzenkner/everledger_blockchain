@@ -1,0 +1,75 @@
+[0m15:28:57.916792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE79174B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE79C9F290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE79C318D0>]}
+
+
+============================== 15:28:57.923792 | c76085cd-d46c-49fb-b18e-6d0f5c360ca5 ==============================
+[0m15:28:57.923792 [info ] [MainThread]: Running with dbt=1.7.2
+[0m15:28:57.924792 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\gabri\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init block_transforms', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:28:57.928884 [debug] [MainThread]: Starter project path: C:\Users\gabri\miniconda3\Lib\site-packages\dbt\include\starter_project
+[0m15:28:57.960885 [info ] [MainThread]: 
+Your new dbt project "block_transforms" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:28:57.962885 [info ] [MainThread]: Setting up your profile.
+[0m15:35:24.675234 [info ] [MainThread]: Profile block_transforms written to C:\Users\gabri\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:35:24.681217 [debug] [MainThread]: Command `dbt init` succeeded at 15:35:24.680208 after 386.85 seconds
+[0m15:35:24.682206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE79D0B610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE7A0F8C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE7997B750>]}
+[0m15:35:24.683213 [debug] [MainThread]: Flushing usage events
+[0m15:41:15.151403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A0997250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A0994450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A04EF6D0>]}
+
+
+============================== 15:41:15.162399 | 30facdaf-977a-48b1-baf8-4cf91abfa7b9 ==============================
+[0m15:41:15.162399 [info ] [MainThread]: Running with dbt=1.7.2
+[0m15:41:15.163400 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\gabri\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m15:41:15.164402 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\gabri\VSCode Projects\Blockchain\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:41:15.168401 [debug] [MainThread]: Command `dbt run` failed at 15:41:15.168401 after 0.13 seconds
+[0m15:41:15.169401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A0948A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A0481E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227A0480D90>]}
+[0m15:41:15.170400 [debug] [MainThread]: Flushing usage events
+[0m15:46:28.546142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AFF7D68E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AFF8222410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AFF8222E90>]}
+
+
+============================== 15:46:28.551141 | 5f593fbf-f472-4f22-bf0e-81911d497533 ==============================
+[0m15:46:28.551141 [info ] [MainThread]: Running with dbt=1.7.2
+[0m15:46:28.552139 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\gabri\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m15:46:28.553140 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\gabri\VSCode Projects\Blockchain\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:46:28.555141 [debug] [MainThread]: Command `dbt run` failed at 15:46:28.555141 after 0.14 seconds
+[0m15:46:28.556140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AFF8239AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AFF7A43D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AFF7A436D0>]}
+[0m15:46:28.557142 [debug] [MainThread]: Flushing usage events
+[0m15:46:51.457268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FCC71A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4F9A60550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FCF636D0>]}
+
+
+============================== 15:46:51.462271 | 1fdb6b8c-14b4-4ba8-b600-c59fd25d6434 ==============================
+[0m15:46:51.462271 [info ] [MainThread]: Running with dbt=1.7.2
+[0m15:46:51.464337 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\gabri\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:46:51.466330 [info ] [MainThread]: dbt version: 1.7.2
+[0m15:46:51.467330 [info ] [MainThread]: python version: 3.11.4
+[0m15:46:51.467330 [info ] [MainThread]: python path: C:\Users\gabri\miniconda3\python.exe
+[0m15:46:51.468329 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m15:46:55.126693 [info ] [MainThread]: Using profiles dir at C:\Users\gabri\.dbt
+[0m15:46:55.127695 [info ] [MainThread]: Using profiles.yml file at C:\Users\gabri\.dbt\profiles.yml
+[0m15:46:55.129703 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\gabri\VSCode Projects\Blockchain\dbt\dbt_project.yml
+[0m15:46:55.131697 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:46:55.138693 [debug] [MainThread]: Command `dbt debug` failed at 15:46:55.138693 after 3.77 seconds
+[0m15:46:55.139692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FD4AB310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FD43AA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FCC35ED0>]}
+[0m15:46:55.139692 [debug] [MainThread]: Flushing usage events

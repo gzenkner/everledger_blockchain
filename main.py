@@ -1,6 +1,6 @@
 from names_generator import generate_name
 import random
-from blockchain import Transaction, Block, Blockchain, Node
+from blockchain import Transaction, Block, Blockchain, Node, Mempool
 
 bc_name = input('Enter the name of your blockchain')
 number_of_nodes_to_create = int(input(f'Enter number of peers on {bc_name}'))
@@ -40,6 +40,12 @@ def generate_transactions(transaction_count):
     return transaction_object_list
 
 
+current_transactionos = Mempool.add_transactions(generate_transactions(transaction_count))
+
+if len(Mempool.add_transactions) > 160:
+    create_block = create_block()
+
+
 def create_blocks(block_index_transaction_dic):
     hash_list = []
     block_list = []
@@ -52,3 +58,5 @@ def create_blocks(block_index_transaction_dic):
         block_list.append(Block(index=0, previous_hash=previous_hash, transaction_list=transaction_list))
 
 create_blocks(block_index_transaction_dic)
+
+
