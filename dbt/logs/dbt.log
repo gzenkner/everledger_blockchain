@@ -73,3 +73,31 @@ Internal Error
 [0m15:46:55.138693 [debug] [MainThread]: Command `dbt debug` failed at 15:46:55.138693 after 3.77 seconds
 [0m15:46:55.139692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FD4AB310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FD43AA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4FCC35ED0>]}
 [0m15:46:55.139692 [debug] [MainThread]: Flushing usage events
+[0m16:55:48.039393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB88D29950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB88F93390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB89324ED0>]}
+
+
+============================== 16:55:48.046391 | d1cc7957-f374-4a8d-b5bb-d33b5ec76a38 ==============================
+[0m16:55:48.046391 [info ] [MainThread]: Running with dbt=1.7.2
+[0m16:55:48.047896 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\gabri\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --model stg_blocks', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:55:48.048902 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\gabri\VSCode Projects\Blockchain\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:55:48.050901 [debug] [MainThread]: Command `dbt run` failed at 16:55:48.050901 after 0.10 seconds
+[0m16:55:48.051902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB890EAAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB89549850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB89594DD0>]}
+[0m16:55:48.052901 [debug] [MainThread]: Flushing usage events
+[0m16:57:14.101552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235571ED250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023557245050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023557521F90>]}
+
+
+============================== 16:57:14.108552 | c90ae144-be46-46e4-8992-eee571a7cd32 ==============================
+[0m16:57:14.108552 [info ] [MainThread]: Running with dbt=1.7.2
+[0m16:57:14.109553 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\gabri\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run --model stg_blocks', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:57:14.110552 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\gabri\VSCode Projects\Blockchain\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:57:14.112552 [debug] [MainThread]: Command `dbt run` failed at 16:57:14.112552 after 0.12 seconds
+[0m16:57:14.113551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023557A39E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023557233310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235572306D0>]}
+[0m16:57:14.114552 [debug] [MainThread]: Flushing usage events
