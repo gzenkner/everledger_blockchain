@@ -7,4 +7,5 @@ Statistics as of December 1st 2023
 Each block has a mean of 156 transactions and a std of 53 and min of 3 and max of 795
 
 
-![Test](https://github.com/gzenkner/everledger_blockchain/blob/main/superset_dashboard.png)
+![Test](https://github.com/gzenkner/everledger_blockchain/blob/main/dashboard_everledger_1.png)
+![Test](https://github.com/gzenkner/everledger_blockchain/blob/main/dashboard_everledger_2.png)
