@@ -2,8 +2,14 @@ import hashlib
 import json
 import datetime
 import math
-import ecdsa
+from ecdsa import SigningKey, SECP256k1
+import random
 
+class Address:
+    def __init__(self):
+        self.creation_time = datetime.datetime.timestamp(datetime.datetime.now())
+        self.public_key = SigningKey.generate(curve=SECP256k1).get_verifying_key().to_string().hex()
+        self.private_key = SigningKey.generate(curve=SECP256k1).to_string().hex()
 
 class Blockchain:
     """
@@ -26,102 +32,11 @@ class Blockchain:
         self.validator_chain.append(validator)
 
     def create_block(self):
-        # Select a validator randomly to create the next block
         selected_validator = random.choice(self.validators)
 
-        # Create the new block
         new_block = Block(selected_validator.address)
         self.chain.append(new_block)
 
-    # def validate_block(self, block, validator):
-
-    #     # Validate timestamp
-    #     current_timestamp = int(datetime.datetime.timestamp(datetime.datetime.now()))
-    #     if abs(block.timestamp - current_timestamp) > MAX_TIMESTAMP_DIFF:
-    #         raise InvalidBlock("Invalid timestamp")
-
-    #     # Validate parent hash
-    #     if block.parent_hash != self.block_chain[-1].hash:
-    #         raise InvalidBlock("Invalid parent hash")
-
-    #     # Validate miner's address
-    #     if not is_valid_address(block.miner_address):
-    #         raise InvalidBlock("Invalid miner address")
-
-    #     # Validate transactions
-    #     for transaction in block.transactions:
-    #         # Validate transaction gas
-    #         if transaction.gas > MAX_GAS_PER_TRANSACTION:
-    #             raise InvalidBlock("Transaction gas exceeds limit")
-
-    #         # Validate transaction format
-    #         if not has_valid_transaction_format(transaction):
-    #             raise InvalidBlock("Invalid transaction format")
-
-    #         # Validate transaction rules
-    #         if not transaction_adheres_to_consensus_rules(transaction):
-    #             raise InvalidBlock("Transaction violates consensus rules")
-
-    #         # Validate transaction output
-    #         if get_transaction_output_value(transaction) > get_transaction_input_value(transaction):
-    #             raise InvalidBlock("Invalid transaction output value")
-
-    #         # Validate sender's account balance
-    #         sender_address = transaction.sender_address
-    #         sender_balance = get_account_balance(sender_address)
-    #         if sender_balance < get_transaction_total_cost(transaction):
-    #             raise InvalidBlock("Insufficient sender balance")
-
-    #         # Validate transaction nonce
-    #         sender_nonce = get_account_nonce(sender_address)
-    #         if transaction.nonce != sender_nonce:
-    #             raise InvalidBlock("Invalid transaction nonce")
-
-    #     # Validate block reward (if applicable)
-    #     if is_reward_block(block):
-    #         if block.reward != get_block_reward(block.epoch):
-    #             raise InvalidBlock("Invalid block reward")
-
-    #     # Validate RANDAO process
-    #     if not validate_randao(block):
-    #         raise InvalidBlock("Invalid RANDAO process")
-
-    #     # Validate attestation data
-    #     if not validate_attestation_data(block):
-    #         raise InvalidBlock("Invalid attestation data")
-
-    #     # Finality check
-    #     if not is_block_finalized(block):
-    #         raise InvalidBlock("Block is not finalized")
-
-    #     # Block is valid
-    #     return True
-
-    # def number_of_nodes_for_concensus(self):
-    #     node_count = len(self.node_chain)
-    #     majority = int(math.ceil(node_count) / 2)
-    #     return f"Need a minimum of {majority} nodes needed"
-    
-
-
-    # def get_most_recent_block(self):
-    #     if len(self.block_chain) > 0:
-    #         return self.block_chain[-1]
-    #     else:
-    #         print('No blocks added yet')
-
-    # def proof_of_work_example(self, data, number_zeros):
-    #     # 0x1f3206401212c828 actual example of a nonce  
-    #     prefix = '0'*number_zeros
-    #     nonce = 0
-    #     while True:
-    #         guess = f'{data}{nonce}'
-    #         hash = hashlib.sha256(guess.encode()).hexdigest()
-    #         if hash.startswith(prefix):
-    #             print(f'Nonce {nonce} satisfies condition')
-    #             return nonce
-    #         nonce += 1
-    
 class Transaction:
     def __init__(self, nonce, from_address, to_address, value):
         self.date = datetime.datetime.timestamp(datetime.datetime.now())
@@ -165,12 +80,6 @@ class Block():
         self.transactions_root = None # The root of the transaction trie of the block
         self.state_root = None # The root of the final state trie of the block
         self.receipts_root = None # The root of the receipts trie of the block	
-    
-    def attempt_block_mutation(self):
-        """
-        Mutate transactions within a block to test the effect on verification and concensus within the block chain
-        """
-        pass
 
 class Node():
     # stores a complete copy of the blockchain, light or full node
@@ -193,7 +102,6 @@ class Validator:
 
         # Return the signature as a tuple of (r, s, v)
         return signature
-    
     
 class Mempool():
     def __init__(self):
