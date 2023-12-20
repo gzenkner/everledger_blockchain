@@ -114,11 +114,10 @@ class Mempool():
         if block_validated == True:
             self.transactions = []
 
-class Wallet():
-    def __init__(self, name):
-        self.name = name
 
-class Validator():
-    def __init__(self, name):
-        self.name = name
-
+class Concensus():
+    # proof of stake
+    # proof of work
+    # delegated proof of stake
+    def __init__(self, kind):
+        self.kind = kind
